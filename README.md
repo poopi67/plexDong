@@ -3,7 +3,9 @@ Takes the current play count from a [Tautulli](https://github.com/Tautulli/Tautu
 
 ## ⚠ NOTICE ⚠
 
-This is intended as a joke, please do not take it seriously. 
+This is intended as a joke, please do not take it seriously.
+
+This is intended for personal use only, so it is not very secure and may result in your database being exposed if left unattended. In the future, I will implement more security measures (if I feel like it).
 
 ## Installation
 - You must have a webserver running to make this work, I used Apache. 
