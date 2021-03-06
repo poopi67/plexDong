@@ -12,7 +12,7 @@ class DongDB extends SQLite3
   function createDong($db, $email)
   {
     $this->email = $email;
-    // Display all sqlite tables
+    // Display the total watch count from session_history from the given email and where the paused counter is 0 (to prevent duplicate entries)
     $statement= $db->prepare("SELECT COUNT(*) as count FROM session_history WHERE user = :user AND paused_counter = 0;");
     $statement->bindValue(':user', $email);
     $result = $statement->execute();
