@@ -1,8 +1,11 @@
+<?php ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL); ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>PENIS SIZE</title>
+    <title>PLEX PP</title>
   </head>
   <body>
     <form action="displayValues.php" method="post">
@@ -12,13 +15,3 @@
     </form>
   </body>
 </html>
-<?php
-  // $db = new ConnectDB();
-// // Display all sqlite tables
-//     $tablesquery = $db->query("SELECT * FROM users;");
-//     while ($table = $tablesquery->fetchArray(SQLITE3_ASSOC)) {
-//         echo $table['username'] . '<br />';
-// }
-// "SELECT COUNT(*) FROM session_history WHERE user_id = 20078290 AND paused_counter = 0;"
-
-?>
