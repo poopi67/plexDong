@@ -8,7 +8,7 @@ class DongDB extends SQLite3
   {
     // This is the default location of the tautulli.db file, you may need to make a copy/hardlink as the default permissions of this directory may prevent it
     // from being usable.
-    $this->open('/var/www/html/tautulli.db');
+    $this->open('/opt/Tautulli/tautulli.db');
   }
   // Handles the displaying of the Dong based on the db and email parameters
   function createDong($db, $email)
