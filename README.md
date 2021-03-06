@@ -13,4 +13,4 @@ This is intended as a joke, please do not take it seriously.
 
 ## Example
 
-![Example](/assets/output.png)
+<a href="#">![Example](/assets/output.png)</a>
