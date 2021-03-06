@@ -28,7 +28,7 @@ class DongDB extends SQLite3
         echo "8". str_repeat("=", $newCount) . "D";
       } else {
         echo "You entered an email that is not tied to a Plex account. Redirecting you back to the previous page.<br />";
-        header("refresh:5;url=/index.php");
+        header("refresh:5;url=/index.html");
       }
     }
   }
