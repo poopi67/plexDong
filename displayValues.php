@@ -14,7 +14,7 @@
   ?>
   <body>
     <br />
-
+    
     <button type="button" name="button" id="button" onclick="dispLeader();">View Leaderboard</button>
     <p id="leaderBrd"> </p>
     <script type="text/javascript">
@@ -31,8 +31,6 @@
         button.innerHTML = "View Leaderboard";
       }
     }
-  </script>
-
-
-</body>
-</html>
+    </script>
+  </body>
+  </html>
