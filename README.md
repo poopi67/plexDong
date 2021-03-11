@@ -14,6 +14,6 @@ This is intended for personal use only, so it is not very secure and may result 
 - This requires a [Tautulli](https://github.com/Tautulli/Tautulli) database file to be specified in `/lib/ConnectDB.class.php` **MAKING A BACKUP OF THIS FILE IS RECOMMENDED**.
 - Go crazy.
 
-## Example
+## <a href="https://plexdong.herokuapp.com">Example</a>
 
 <a href="#">![Example](/assets/output.png)</a>
