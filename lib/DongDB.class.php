@@ -8,12 +8,12 @@ class DongDB extends SQLite3
   {
     // This is the default location of the tautulli.db file, you may need to make a copy/hardlink as the default permissions of this directory may prevent it
     // from being usable.
-    $this->open('/opt/Tautulli/tautulli.db');
+    $this->open('tautulliEX.db');
   }
   // Handles the displaying of the Dong based on the db and email parameters
   function createDong($db, $email)
   {
-    // Display the total watch count from session_history from the given email
+    // Display the total watch count from session_history from the given email and where the paused counter is 0 (to prevent duplicate entries)
     $statement= $db->prepare("SELECT COUNT(*) as count FROM session_history WHERE user = :user;");
     $statement->bindValue(':user', $email);
     $result = $statement->execute();
@@ -31,5 +31,19 @@ class DongDB extends SQLite3
         header("refresh:5;url=/index.html");
       }
     }
+  }
+
+  function displayAll($db)
+  {
+    $stmt = $db->prepare("SELECT user, COUNT(*) as count FROM session_history GROUP BY user ORDER BY count DESC;");
+    $result = $stmt->execute();
+    echo "<ol>";
+    while ($table = $result->fetchArray(SQLITE3_ASSOC)) {
+      $user = $table['user'];
+      $count = $table['count'];
+      $newCount = round($count / 5);
+      echo "<li>" . $user . " with <b>" . $count . "</b> plays " . "</li><br />" . "8" . str_repeat("=", $newCount) . "D";
+    }
+    echo "</ol>";
   }
 }
