@@ -5,9 +5,7 @@
 
 Takes the current play count from [Tautulli](https://github.com/Tautulli/Tautulli) and generates an ASCII Dong 🍆 based on the amount.
 
-## ⚠ NOTICE ⚠
-
-This is intended as a joke, please do not take it seriously.
+*This is intended as a joke, please do not take it seriously.*
 
 ## Installation
 - You must have [Tautulli](https://github.com/Tautulli/Tautulli) installed and fully configured.
