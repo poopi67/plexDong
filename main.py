@@ -1,15 +1,8 @@
-from flask import Flask, request, redirect
-from flask import render_template
-from dotenv import load_dotenv
-import os
-import requests
 import json
 import math
+import os
 
-# Loads the .env file for the credentials
-load_dotenv()
-
-app = Flask(__name__)
+import requests
 
 
 # Handles the query to the API
@@ -32,29 +25,11 @@ def query(user):
             return str(user['plays'])
 
 
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-
-@app.route('/dong', methods=['POST'])
-def display_dong():
-    email = request.form['email']
-    num = query(email)
-    # If num doesn't have a value assigned to it, return error
-    if not num:
-        error = 'Invalid email/username, please try again.'
-        return render_template('index.html', error=error, title='| Error')
-    # Else, display the Dong
-    else:
-        # The variables to create the dong
-        # Gets the total watch amount and divides it by 5 then displays the, uh, shaft
-        # using the newCount number with "="'s
-        dong_digit = math.trunc(int(num) / 5)
-        dong = '8' + '=' * dong_digit + 'D'
-        statement = '{0} you have '.format(email) + num + ' plays, therefore '
-        return render_template('index.html', statement=statement, dong=dong, title="| " + email)
-
-
-if __name__ == '__main__':
-    app.run(host='localhost', port=6942)
+# Handles the calculation/creation of the Dong
+def createDong(num):
+    # The variables to create the dong
+    # Gets the total watch amount and divides it by 5 then displays the, uh, shaft
+    # using the newCount number with "="'s
+    dong_digit = math.trunc(int(num) / 5)
+    dong = '8' + '=' * dong_digit + 'D'
+    return dong
