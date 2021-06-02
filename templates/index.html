@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/dong.png" />
+    <meta charset="utf-8">
+    <title>PlexDong {{ title }}</title>
+    <form action="/dong" method="post">
+      <input type="text" name="email" placeholder="username/email" pattern="[a-zA-Z0-9@.-_]{3,}" required></input>
+      <input type="submit" value="Submit"></input>
+    </form>
+    <h3>{{ statement }}<h3>
+    {{ dong }}
+    {{ error }}
+  </head>
+  <body>
+
+  </body>
+</html>
