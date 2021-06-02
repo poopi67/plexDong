@@ -1,5 +1,5 @@
 # plexDong 🍆
-Takes the current play count from a [Tautulli](https://github.com/Tautulli/Tautulli) database file and generates an ASCII Dong 🍆 based on the amount.
+Takes the current play count from a [Tautulli](https://github.com/Tautulli/Tautulli) database and generates an ASCII Dong 🍆 based on the amount.
 
 ## ⚠ NOTICE ⚠
 
@@ -14,3 +14,6 @@ This is intended for personal use only, so it is not very secure and may result 
 - Edit the `.env` file with your Tautulli host and API key (found under `Settings > Web Interface`)
 - Run it using `python3 main.py`
 - Go crazy.
+
+## Example
+![Example](https://github.com/poopi67/plexDong/blob/main/assets/output.jpg)
