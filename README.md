@@ -1,4 +1,8 @@
 # plexDong 🍆
+[![PyPI](https://img.shields.io/pypi/v/flask?label=flask&style=flat-square)](https://pypi.org/project/Flask/)
+[![PyPI](https://img.shields.io/pypi/v/requests?label=requests&style=flat-square)](https://pypi.org/project/requests/)
+[![PyPI](https://img.shields.io/pypi/v/python-dotenv?label=python-dotenv&style=flat-square)](https://pypi.org/project/python-dotenv/)
+
 Takes the current play count from [Tautulli](https://github.com/Tautulli/Tautulli) and generates an ASCII Dong 🍆 based on the amount.
 
 ## ⚠ NOTICE ⚠
