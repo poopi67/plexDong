@@ -21,4 +21,4 @@ This is intended for personal use only, so it is not very secure and may result 
 - Go crazy.
 
 ## Example
-![Example](https://github.com/poopi67/plexDong/blob/main/assets/output.jpg)
+![Example](https://i.imgur.com/ExdJlg0.png)
