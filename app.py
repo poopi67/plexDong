@@ -1,11 +1,8 @@
-from dotenv import load_dotenv
 from flask import Flask, request
 from flask import render_template
 
 from main import query, create_dong
 
-# Loads the .env file for the credentials
-load_dotenv()
 
 app = Flask(__name__)
 

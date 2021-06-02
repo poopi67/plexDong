@@ -1,8 +1,12 @@
 import json
 import math
 import os
-
 import requests
+
+from dotenv import load_dotenv
+
+# Loads the .env file for the credentials
+load_dotenv()
 
 
 # Handles the query to the API
