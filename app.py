@@ -2,7 +2,7 @@ from dotenv import load_dotenv
 from flask import Flask, request
 from flask import render_template
 
-from main import query, createDong
+from main import query, create_dong
 
 # Loads the .env file for the credentials
 load_dotenv()
@@ -25,7 +25,7 @@ def display_dong():
         return render_template('index.html', error=error, title='| Error')
     # Else, display the Dong
     else:
-        dong = createDong(num)
+        dong = create_dong(num)
         statement = '{0} you have '.format(email) + num + ' plays, therefore '
         return render_template('index.html', statement=statement, dong=dong, title="| " + email)
 

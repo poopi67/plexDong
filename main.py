@@ -26,7 +26,7 @@ def query(user):
 
 
 # Handles the calculation/creation of the Dong
-def createDong(num):
+def create_dong(num):
     # The variables to create the dong
     # Gets the total watch amount and divides it by 5 then displays the, uh, shaft
     # using the newCount number with "="'s
