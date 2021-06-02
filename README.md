@@ -1,5 +1,5 @@
 # plexDong 🍆
-Takes the current play count from a [Tautulli](https://github.com/Tautulli/Tautulli) database and generates an ASCII Dong 🍆 based on the amount.
+Takes the current play count from [Tautulli](https://github.com/Tautulli/Tautulli) and generates an ASCII Dong 🍆 based on the amount.
 
 ## ⚠ NOTICE ⚠
 
