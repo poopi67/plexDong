@@ -13,6 +13,7 @@ This is intended for personal use only, so it is not very secure and may result 
 - Install the requirements using `pip3 install -r requirements.txt`
 - Edit the `.env` file with your Tautulli host and API key (found under `Settings > Web Interface`)
 - Run it using `python3 main.py`
+- Open a web browser to access `http://localhost:6942`
 - Go crazy.
 
 ## Example
