@@ -8,8 +8,8 @@ Takes the current play count from [Tautulli](https://github.com/Tautulli/Tautull
 *This is intended as a joke, please do not take it seriously.*
 
 ## Installation
-- You must have [Tautulli](https://github.com/Tautulli/Tautulli) installed and fully configured.
-- Clone the repository 
+- You must have [Tautulli](https://github.com/Tautulli/Tautulli) installed and fully configured
+- Clone the repository
 - Install the requirements using `pip3 install -r requirements.txt`
 - Edit the `.env` file with your Tautulli host and API key (found under `Settings > Web Interface`)
 - Run it using `python3 app.py`
