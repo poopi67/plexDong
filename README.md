@@ -17,4 +17,4 @@ Takes the current play count from [Tautulli](https://github.com/Tautulli/Tautull
 - Go crazy
 
 ## Example
-<img src="https://i.imgur.com/cOsG4sx.png" width="50%">
+<img src="https://i.imgur.com/mQ9UL0z.png" width="50%"><img src="https://i.imgur.com/ttQ72mn.png" width="50%">
