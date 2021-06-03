@@ -1,8 +1,9 @@
 # plexDong 🍆
+[![GitHub Release](https://img.shields.io/github/v/release/poopi67/plexDong?logo=github&include_prereleases&label=Release&style=flat-square)](https://github.com/poopi67/plexDong/releases)
 [![PyPI](https://img.shields.io/pypi/v/flask?label=flask&style=flat-square)](https://pypi.org/project/Flask/)
 [![PyPI](https://img.shields.io/pypi/v/requests?label=requests&style=flat-square)](https://pypi.org/project/requests/)
 [![PyPI](https://img.shields.io/pypi/v/python-dotenv?label=python-dotenv&style=flat-square)](https://pypi.org/project/python-dotenv/)
-[![Docker](https://img.shields.io/docker/v/poopi67/plexdong?logo=docker&label=version&style=flat-square)](https://hub.docker.com/r/poopi67/plexdong)
+[![Docker](https://img.shields.io/docker/v/poopi67/plexdong?logo=docker&label=Version&style=flat-square)](https://hub.docker.com/r/poopi67/plexdong)
 
 Takes the current play count from [Tautulli](https://github.com/Tautulli/Tautulli) and generates an ASCII Dong 🍆 based on the amount.
 
