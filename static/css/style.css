@@ -1,8 +1,15 @@
+@font-face {
+font-family: "Ubuntu-Regular";
+src: url("/static/fonts/Ubuntu-Regular.ttf");
+src: url("/static/fonts/ubuntu-regular-webfont.woff")format("woff")
+}
+
 html, body {
   margin: 0;
+  font-family: Ubuntu-Regular;
 }
 h1 {
-  font-family: SansSerif, cursive;
+  font-family: Ubuntu-Regular;
 }
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -28,7 +35,7 @@ h1 {
   text-align: center;
   color: white;
   font-size: 35px;
-  font-family: SansSerif, cursive;
+  font-family: Ubuntu-Regular;
   background-color: #704CA5;
 }
 
@@ -44,5 +51,14 @@ input {
   }
   .card {
     max-width: 55%;
+  }
+}
+
+@media (orientation: portrait) {
+  .topnav {
+    max-width: 85%;
+  }
+  .card {
+    max-width: 85%;
   }
 }
