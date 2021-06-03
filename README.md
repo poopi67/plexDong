@@ -13,7 +13,7 @@ Takes the current play count from [Tautulli](https://github.com/Tautulli/Tautull
 - Install the requirements using `pip3 install -r requirements.txt`
 - Edit the `.env` file with your Tautulli host and API key (found under `Settings > Web Interface`)
 - Run it using `python3 app.py`
-- Open a web browser to access `http://localhost:6942`
+- Open a web browser to access `http://localhost:8787`
 - Go crazy
 
 ## Example
