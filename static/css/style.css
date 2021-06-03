@@ -1,0 +1,48 @@
+html, body {
+  margin: 0;
+}
+h1 {
+  font-family: SansSerif, cursive;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  max-width: 85%;
+  min-height: 250px;
+  margin: auto;
+  text-align: center;
+}
+
+.container {
+  padding: 2px 16px;
+  word-wrap: break-word;
+}
+
+.topnav {
+  box-shadow: 0 0 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  max-width: 85%;
+  min-height: 50px;
+  overflow: inherit;
+  margin: auto;
+  text-align: center;
+  color: white;
+  font-size: 35px;
+  font-family: SansSerif, cursive;
+  background-color: #704CA5;
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+}
+
+@media (orientation: landscape) {
+  .topnav {
+    max-width: 55%;
+  }
+  .card {
+    max-width: 55%;
+  }
+}

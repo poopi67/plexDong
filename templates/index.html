@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <link rel="shortcut icon" href="{{ url_for('static', filename='dong.png') }}">
-    <meta charset="utf-8">
-    <title>PlexDong {{ title }}</title>
+<meta charset="UTF-8">
+<head>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='dong.png') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <meta charset="utf-8">
+  <title>PlexDong {{ title }}</title>
+</head>
+  <div class="topnav">
+    <p>&#127814;PlexDong</p>
+  </div>
+  <div class="card">
     <form action="/dong" method="post">
-      <input type="text" name="email" placeholder="username/email" pattern="[a-zA-Z0-9@.-_]{3,}" required></input>
-      <input type="submit" value="Submit"></input>
+      <input type="text" name="email" placeholder="username/email" pattern="[a-zA-Z0-9@.-_]{3,}" required/>
+      <input type="submit" value="Submit"/>
     </form>
-    <h3>{{ statement }}<h3>
-    {{ dong }}
-    {{ error }}
-  </head>
-  <body>
-
-  </body>
-</html>
+    <div class="container">
+      <h3>{{ statement }}<h3>
+        <h1>{{ default | safe }}</h1>
+        {{ dong }}
+        {{ error }}
+      </div>
+    </div>
+    </html>

@@ -3,13 +3,13 @@ from flask import render_template
 
 from main import query, create_dong
 
-
 app = Flask(__name__)
 
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    default = "Enter a Username/Email &#128522;"
+    return render_template('index.html', default=default)
 
 
 @app.route('/dong', methods=['POST'])
@@ -28,4 +28,4 @@ def display_dong():
 
 
 if __name__ == '__main__':
-    app.run(host='localhost', port=6942)
+    app.run(host='localhost', port=8787)
