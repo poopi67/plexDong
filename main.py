@@ -9,24 +9,31 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-# Handles the query to the API
-def query(user):
-    # Takes in the Tautulli API/Server credentials from the .env file
-    api_token = os.environ.get('api_token')
-    server_url = os.environ.get('server_url')
-    user = user
-    api_url_base = '{0}/api/v2?apikey={1}&cmd=get_users_table&order_column=plays&search={2}'.format(server_url,
-                                                                                                    api_token, user)
+# Handles the communication with the API using the URL base
+def api_handler(url_base):
     headers = {'Content-Type': 'application/json'}
-    response = requests.get(api_url_base, headers=headers)
+    response = requests.get(url_base, headers=headers)
     users = json.loads(response.text)
     for user in users['response']['data']['data']:
         # If the record does not exist, continue
-        if 'recordsFiltered' == 0 in users:
+        if 'recordsFiltered' > '1' in users:
             continue
         # Otherwise, return the value
         else:
-            return str(user['plays'])
+            plays = str(user['plays'])
+            username = str(user['username'])
+            return plays, username
+
+
+# Handles the query to the API
+def query(user):
+    # Takes in the Tautulli API/Server credentials from the .env file
+    api_key = os.environ.get('api_token')
+    server_url = os.environ.get('server_url')
+    user = user
+    api_url_base = '{0}/api/v2?apikey={1}&cmd=get_users_table&order_column=plays&search={2}'.format(server_url,
+                                                                                                    api_key, user)
+    return api_handler(api_url_base)
 
 
 # Handles the calculation/creation of the Dong
