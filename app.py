@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     default = "Enter a Username/Email &#128522;"
-    return render_template('index.html', default=default)
+    return render_template('index.html', default=default, isIndex=True)
 
 
 @app.route('/dong', methods=['POST'])
@@ -25,7 +25,7 @@ def display_dong():
     # Else, display the Dong
     else:
         statement = '{0} you have '.format(username) + plays + ' plays, therefore '
-        return render_template('index.html', statement=statement, dong=dong, title="| " + email, alluser=all_user)
+        return render_template('index.html', statement=statement, dong=dong, title="| " + email, alluser=all_user, isIndex=False)
 
 
 @app.errorhandler(500)
@@ -35,4 +35,4 @@ def internal_error(error):
 
 
 if __name__ == '__main__':
-    app.run(host='localhost', port=8787)
+    app.run(host='0.0.0.0', port=8787)

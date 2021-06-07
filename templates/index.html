@@ -17,17 +17,20 @@
       <input type="submit" value="Submit"/>
     </form>
     <div class="container">
-      <h3>{{ statement }}<h3>
+      <h3>{{ statement }}</h3>
         <h1>{{ default | safe }}</h1>
         {{ dong }}
         {{ error }}
         {{ msg | safe }}
           <br />
-          <button id="showBrd">Show Leaderboard</button>
-      <div id="ldrBrd" style="display: none;">
-          {% for user in alluser %}
-            <p> {{ user }} </p>
-          {% endfor %}
+
+          {% if not isIndex %}
+              <button id="showBrd">Show Leaderboard</button>
+              <div id="ldrBrd" style="display: none;">
+              {% for user in alluser %}
+                <p> {{ user }} </p>
+              {% endfor %}
+          {% endif %}
       </div>
       </div>
     </div>
