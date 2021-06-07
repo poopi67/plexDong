@@ -4,6 +4,12 @@ src: url("/static/fonts/Ubuntu-Regular.ttf");
 src: url("/static/fonts/ubuntu-regular-webfont.woff")format("woff")
 }
 
+button {
+  display: block;
+  min-width: 100%;
+  margin-top: 15%;
+}
+
 html, body {
   margin: 0;
   font-family: Ubuntu-Regular;
@@ -12,6 +18,8 @@ h1 {
   font-family: Ubuntu-Regular;
 }
 .card {
+  display: flex;
+  flex-direction: column;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   max-width: 85%;
@@ -55,6 +63,9 @@ input {
 }
 
 @media (orientation: portrait) {
+  html, body, h1, button, p, input, div {
+    font-size: 100%;
+  }
   .topnav {
     max-width: 85%;
   }

@@ -1,7 +1,7 @@
 from flask import Flask, request
 from flask import render_template
 
-from main import query, create_dong
+from main import single_query, create_dong, get_all
 
 app = Flask(__name__)
 
@@ -15,16 +15,17 @@ def index():
 @app.route('/dong', methods=['POST'])
 def display_dong():
     email = request.form['email']
-    plays, username = query(email)
+    plays, username = single_query(email)
+    dong = create_dong(plays)
+    all_user = get_all()
     # If num doesn't have a value assigned to it, return error
     if not username:
         error = 'Invalid email/username, please try again.'
         return render_template('index.html', error=error, title='| Error')
     # Else, display the Dong
     else:
-        dong = create_dong(plays)
         statement = '{0} you have '.format(username) + plays + ' plays, therefore '
-        return render_template('index.html', statement=statement, dong=dong, title="| " + email)
+        return render_template('index.html', statement=statement, dong=dong, title="| " + email, alluser=all_user)
 
 
 @app.errorhandler(500)

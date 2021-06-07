@@ -4,6 +4,7 @@
 <head>
   <link rel="shortcut icon" href="{{ url_for('static', filename='dong.png') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{url_for('static', filename='script.js')}}"></script>
   <meta charset="utf-8">
   <title>PlexDong {{ title }}</title>
 </head>
@@ -20,7 +21,14 @@
         <h1>{{ default | safe }}</h1>
         {{ dong }}
         {{ error }}
-        {{ msg | safe}}
+        {{ msg | safe }}
+          <br />
+          <button id="showBrd">Show Leaderboard</button>
+      <div id="ldrBrd" style="display: none;">
+          {% for user in alluser %}
+            <p> {{ user }} </p>
+          {% endfor %}
+      </div>
       </div>
     </div>
     </html>
