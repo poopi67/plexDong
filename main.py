@@ -10,21 +10,24 @@ load_dotenv()
 
 
 # Handles the communication with the API using the URL base
-def api_handler(url_base):
+def api_handler(user):
+    # Takes in the Tautulli API/Server credentials from the .env file
+    api_key = os.environ.get('api_token')
+    server_url = os.environ.get('server_url')
+    if not user:
+        api_url_base = '{0}/api/v2?apikey={1}&cmd=get_users_table&order_column=plays'.format(server_url,
+                                                                                             api_key)
+    else:
+        api_url_base = '{0}/api/v2?apikey={1}&cmd=get_users_table&order_column=plays&search={2}'.format(server_url,
+                                                                                                        api_key, user)
     headers = {'Content-Type': 'application/json'}
-    response = requests.get(url_base, headers=headers)
+    response = requests.get(api_url_base, headers=headers)
     return json.loads(response.text)
 
 
 # Handles a single user query to the API
 def single_query(user):
-    # Takes in the Tautulli API/Server credentials from the .env file
-    api_key = os.environ.get('api_token')
-    server_url = os.environ.get('server_url')
-    user = user
-    api_url_base = '{0}/api/v2?apikey={1}&cmd=get_users_table&order_column=plays&search={2}'.format(server_url,
-                                                                                                    api_key, user)
-    users = api_handler(api_url_base)
+    users = api_handler(user)
     for user in users['response']['data']['data']:
         # If the record does not exist, continue
         if 'recordsFiltered' == 0 in users:
@@ -38,14 +41,7 @@ def single_query(user):
 
 # Handles a get all query to the API
 def get_all():
-    # Takes in the Tautulli API/Server credentials from the .env file
-    api_key = os.environ.get('api_token')
-    server_url = os.environ.get('server_url')
-    api_url_base = '{0}/api/v2?apikey={1}&cmd=get_users_table&order_column=plays&order_dir=desc'.format(server_url,
-                                                                                                        api_key)
-    # Passes the URL to the api_handler
-    all_users = api_handler(api_url_base)
-
+    all_users = api_handler(user='')
     for _ in all_users:
         # Gets the total count of entries recorded and assigns it to an integer
         tot_count = int(all_users['response']['data']['recordsFiltered'])
