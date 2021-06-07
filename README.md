@@ -1,9 +1,9 @@
 # plexDong 🍆
-[![GitHub Release](https://img.shields.io/github/v/release/poopi67/plexDong?logo=github&include_prereleases&label=Release&style=flat-square)](https://github.com/poopi67/plexDong/releases)
+[![GitHub Release](https://img.shields.io/github/v/release/poopi67/plexDong?logo=github&include_prereleases&label=Release&style=flat-square&color=F7F7F7)](https://github.com/poopi67/plexDong/releases)
 [![Docker](https://img.shields.io/docker/v/poopi67/plexdong?logo=docker&label=Version&style=flat-square)](https://hub.docker.com/r/poopi67/plexdong)
-[![PyPI](https://img.shields.io/pypi/v/flask?label=flask&style=flat-square)](https://pypi.org/project/Flask/)
-[![PyPI](https://img.shields.io/pypi/v/requests?label=requests&style=flat-square)](https://pypi.org/project/requests/)
-[![PyPI](https://img.shields.io/pypi/v/python-dotenv?label=python-dotenv&style=flat-square)](https://pypi.org/project/python-dotenv/)
+[![PyPI](https://img.shields.io/pypi/v/flask?logo=python&label=flask&style=flat-square&color=FFD43B)](https://pypi.org/project/Flask/)
+[![PyPI](https://img.shields.io/pypi/v/requests?logo=python&label=requests&style=flat-square&color=FFD43B)](https://pypi.org/project/requests/)
+[![PyPI](https://img.shields.io/pypi/v/python-dotenv?logo=python&label=python-dotenv&style=flat-square&color=FFD43B)](https://pypi.org/project/python-dotenv/)
 
 
 Takes the current play count from [Tautulli](https://github.com/Tautulli/Tautulli) and generates an ASCII Dong 🍆 based on the amount.
@@ -28,4 +28,4 @@ Simply replace the environment variables with your own and run the command.
 - Go crazy
 
 ## Example
-<img src="https://i.imgur.com/mQ9UL0z.png" width="50%"><img src="https://i.imgur.com/ttQ72mn.png" width="50%">
+<img src="https://i.imgur.com/y3tK96z.png" style="width: 50%;"><img src="https://i.imgur.com/ycwl0iG.png" style="width: 50%;">
