@@ -63,13 +63,10 @@ input {
 }
 
 @media (orientation: portrait) {
-  html, body, h1, button, p, input, div {
-    font-size: 100%;
-  }
   .topnav {
-    max-width: 85%;
+    padding-bottom: 1px;
   }
-  .card {
-    max-width: 85%;
+  .topnav > p {
+    margin-bottom: 1px;
   }
 }
