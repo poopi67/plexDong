@@ -47,6 +47,10 @@ h1 {
   background-color: #704CA5;
 }
 
+.topnav > h2 {
+    margin-bottom: 1px;
+  }
+
 input {
   box-sizing: border-box;
   width: 100%;
@@ -72,8 +76,5 @@ input {
   .topnav {
     padding-bottom: 1px;
     font-size: 40px;
-  }
-  .topnav > h2 {
-    margin-bottom: 1px;
   }
 }
