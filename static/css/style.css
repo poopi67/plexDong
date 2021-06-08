@@ -14,9 +14,11 @@ html, body {
   margin: 0;
   font-family: Ubuntu-Regular;
 }
+
 h1 {
   font-family: Ubuntu-Regular;
 }
+
 .card {
   display: flex;
   flex-direction: column;
@@ -70,9 +72,11 @@ input {
   input, button, .container {
     font-size: 30px;
   }
+  
   #ldrBrd {
     font-size: 20px;
   }
+  
   .topnav {
     padding-bottom: 1px;
     font-size: 40px;
