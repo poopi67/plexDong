@@ -10,15 +10,17 @@ load_dotenv()
 # Takes in the Tautulli API/Server credentials from the .env file
 api_key = os.environ.get('api_token')
 server_url = os.environ.get('server_url')
-# Blank global variable for the user
-user = ''
+# Satisfies the parameter for api_handler to trigger the query with no 'search=' command
+no_user = ''
 
 
 # Handles the communication with the API using the URL base
 def api_handler(user):
+    # Eliminates the search query if no user is passed in the parameter using no_user
     if not user:
         api_url_base = '{0}/api/v2?apikey={1}&cmd=get_users_table&order_column=plays'.format(server_url,
                                                                                              api_key)
+    # Otherwise it acts normally and searches for a user
     else:
         api_url_base = '{0}/api/v2?apikey={1}&cmd=get_users_table&order_column=plays&search={2}'.format(server_url,
                                                                                                         api_key, user)
@@ -30,7 +32,7 @@ def api_handler(user):
 # Handles a single user query to the API
 def single_query(user):
     users = api_handler(user)
-    for _ in users['response']['data']['data']:
+    for user in users['response']['data']['data']:
         # If the record does not exist, continue
         if 'recordsFiltered' == 0 in users:
             continue
@@ -43,7 +45,8 @@ def single_query(user):
 
 # Handles a get all query to the API
 def get_all():
-    all_users = api_handler(user)
+    # Sends the no_user variable to trigger the search query without the 'search=' parameter
+    all_users = api_handler(no_user)
     for _ in all_users:
         # Gets the total count of entries recorded and assigns it to an integer
         tot_count = int(all_users['response']['data']['recordsFiltered'])
