@@ -1,6 +1,7 @@
 # plexDong 🍆
-[![GitHub Release](https://img.shields.io/github/v/release/poopi67/plexDong?logo=github&include_prereleases&label=Release&style=flat-square&color=F7F7F7)](https://github.com/poopi67/plexDong/releases)
-[![Docker](https://img.shields.io/docker/v/poopi67/plexdong?logo=docker&label=Version&style=flat-square)](https://hub.docker.com/r/poopi67/plexdong)
+[![GitHub Release](https://img.shields.io/github/v/release/poopi67/plexDong?logo=github&include_prereleases&label=release&style=flat-square&color=F7F7F7)](https://github.com/poopi67/plexDong/releases)
+[![Docker](https://img.shields.io/docker/v/poopi67/plexdong?logo=docker&label=version&style=flat-square)](https://hub.docker.com/r/poopi67/plexdong)
+[![Docker](https://img.shields.io/docker/cloud/build/poopi67/plexdong?logo=docker&style=flat-square)](https://hub.docker.com/r/poopi67/plexdong)
 [![PyPI](https://img.shields.io/pypi/v/flask?logo=python&label=flask&style=flat-square&color=FFD43B)](https://pypi.org/project/Flask/)
 [![PyPI](https://img.shields.io/pypi/v/requests?logo=python&label=requests&style=flat-square&color=FFD43B)](https://pypi.org/project/requests/)
 [![PyPI](https://img.shields.io/pypi/v/python-dotenv?logo=python&label=python-dotenv&style=flat-square&color=FFD43B)](https://pypi.org/project/python-dotenv/)
