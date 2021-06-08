@@ -31,7 +31,7 @@ def display_dong():
 @app.errorhandler(500)
 def internal_error(error):
     msg = '<p style="color:red;">Invalid email/username, please try again.</p><br />'
-    return render_template('index.html', error=error, msg=msg, title='| Error')
+    return render_template('index.html', error=error, msg=msg, title='| Error', isIndex=True)
 
 
 if __name__ == '__main__':
