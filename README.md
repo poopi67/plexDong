@@ -3,8 +3,7 @@
 [![Docker](https://img.shields.io/docker/v/poopi67/plexdong?logo=docker&label=version&style=flat-square)](https://hub.docker.com/r/poopi67/plexdong)
 [![Docker](https://img.shields.io/docker/cloud/build/poopi67/plexdong?logo=docker&style=flat-square)](https://hub.docker.com/r/poopi67/plexdong/builds)
 [![PyPI](https://img.shields.io/pypi/v/flask?logo=python&label=flask&style=flat-square&color=FFD43B)](https://pypi.org/project/Flask/)
-[![PyPI](https://img.shields.io/pypi/v/requests?logo=python&label=requests&style=flat-square&color=FFD43B)](https://pypi.org/project/requests/)
-[![PyPI](https://img.shields.io/pypi/v/python-dotenv?logo=python&label=python-dotenv&style=flat-square&color=FFD43B)](https://pypi.org/project/python-dotenv/)
+[![PyPI](https://img.shields.io/pypi/v/gunicorn?logo=python&label=gunicorn&style=flat-square&color=FFD43B)](https://pypi.org/project/gunicorn/)
 
 
 Takes the current play count from [Tautulli](https://github.com/Tautulli/Tautulli) and generates an ASCII Dong 🍆 based on the amount.
