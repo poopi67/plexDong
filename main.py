@@ -72,6 +72,11 @@ def create_dong(num):
     # The variables to create the dong
     # Gets the total watch amount and divides it by 5 then displays the, uh, shaft
     # using the newCount number with "="'s
-    dong_digit = math.trunc(int(num) / 5)
-    dong = '8' + '=' * dong_digit + 'D'
+    number = int(num)
+    # If the number of plays is less than 5, display the following message
+    if number < 5:
+        dong = 'The play count is too small to generate a dong! How embarrassing!'
+    else:
+        dong_digit = math.trunc(number / 5)
+        dong = '8' + '=' * dong_digit + 'D'
     return dong
