@@ -1,3 +1,4 @@
+import requests
 from flask import Flask, request
 from flask import render_template
 
@@ -25,12 +26,21 @@ def display_dong():
     # Else, display the Dong
     else:
         statement = '{0} you have '.format(username) + plays + ' plays, therefore '
-        return render_template('index.html', statement=statement, dong=dong, title="| " + email, alluser=all_user, isIndex=False)
+        return render_template('index.html', statement=statement, dong=dong, title="| " + email, alluser=all_user,
+                               isIndex=False)
 
 
+# Handles an error that is produced when an invalid email/username is entered
 @app.errorhandler(500)
 def internal_error(error):
     msg = '<p style="color:red;">Invalid email/username, please try again.</p><br />'
+    return render_template('index.html', error=error, msg=msg, title='| Error', isIndex=True)
+
+
+# Handles an error that is produced when the url/API token is invalid
+@app.errorhandler(requests.exceptions.ConnectionError)
+def connection_error(error):
+    msg = '<p style="color:red;">The credentials you entered were incorrect, please try again.</p><br />'
     return render_template('index.html', error=error, msg=msg, title='| Error', isIndex=True)
 
 
