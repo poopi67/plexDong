@@ -4,33 +4,34 @@
 <head>
   <link rel="shortcut icon" href="{{ url_for('static', filename='dong.png') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <script src="{{url_for('static', filename='script.js')}}"></script>
+  <script src="{{url_for('static', filename='script.js')}}"></script>
   <meta charset="utf-8">
   <title>PlexDong {{ title }}</title>
 </head>
-  <div class="topnav">
-    <h2>&#127814;PlexDong</h2>
-  </div>
-  <div class="card">
-    <form action="/dong" method="post">
-      <input type="text" name="email" placeholder="username/email" pattern="[a-zA-Z0-9@.-_]{3,}" autocapitalize="off" required/>
-      <input type="submit" value="Submit"/>
-    </form>
-    <div class="container">
-      <h3>{{ statement }}</h3>
-        <h1>{{ default | safe }}</h1>
-        {{ dong }}
-        {{ error }}
-        {{ msg | safe }}
-          <br />
-          {% if not isIndex %}
-              <button id="showBrd">Show Leaderboard</button>
-              <div id="ldrBrd" style="display: none;">
-              {% for user in alluser %}
-                <p> {{ user }} </p>
-              {% endfor %}
-          {% endif %}
-      </div>
-      </div>
+<div class="topnav">
+  <h2>&#127814;PlexDong</h2>
+</div>
+<div class="card">
+  <form action="/dong" method="post">
+    <input type="text" name="email" placeholder="username/email" pattern="[a-zA-Z0-9@.-_]{3,}" autocapitalize="off" required/>
+    <input type="submit" value="Submit"/>
+  </form>
+  <div class="container">
+    <h3>{{ statement }}</h3>
+    <h1>{{ default | safe }}</h1>
+    {{ dong }}
+    {{ error }}
+    {{ msg | safe }}
+    <br />
+    {% if not isIndex %}
+    <button id="showBrd">Show Leaderboard</button>
+    <div id="ldrBrd" style="display: none;">
+        {% for all_names, all_dongs in zip(all_names, all_dongs) %}
+          <p> {{ loop.index }}. <b>{{ all_names }} </b></p>
+          <p>{{ all_dongs }}</p>
+        {% endfor %}
+      {% endif %}
     </div>
-    </html>
+  </div>
+</div>
+</html>

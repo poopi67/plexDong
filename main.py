@@ -62,7 +62,9 @@ def get_all():
             # Creates a dong from the plays, then appends it to the list
             dong = create_dong(plays)
             all_user.append(dong)
-        return all_user
+        username = all_user[::2]
+        plays = all_user[1::2]
+        return username, plays
 
 
 # Handles the calculation/creation of the Dong

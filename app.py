@@ -18,7 +18,7 @@ def display_dong():
     email = request.form['email']
     plays, username = single_query(email)
     dong = create_dong(plays)
-    all_user = get_all()
+    all_names, all_dongs = get_all()
     # If num doesn't have a value assigned to it, return error
     if not username:
         error = 'Invalid email/username, please try again.'
@@ -26,7 +26,8 @@ def display_dong():
     # Else, display the Dong
     else:
         statement = '{0} you have '.format(username) + plays + ' plays, therefore '
-        return render_template('index.html', statement=statement, dong=dong, title="| " + email, alluser=all_user,
+        return render_template('index.html', statement=statement, dong=dong, title="| " + email, all_names=all_names,
+                               all_dongs=all_dongs,
                                isIndex=False)
 
 
@@ -42,6 +43,12 @@ def internal_error(error):
 def connection_error(error):
     msg = '<p style="color:red;">The credentials you entered were incorrect, please try again.</p><br />'
     return render_template('index.html', error=error, msg=msg, title='| Error', isIndex=True)
+
+
+# Allows for values to be zipped in the flask for-loop templates
+@app.template_global(name='zip')
+def _zip(*args, **kwargs):
+    return __builtins__.zip(*args, **kwargs)
 
 
 if __name__ == '__main__':
