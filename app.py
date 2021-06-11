@@ -27,8 +27,7 @@ def display_dong():
     else:
         statement = '{0} you have '.format(username) + plays + ' plays, therefore '
         return render_template('index.html', statement=statement, dong=dong, title="| " + email, all_names=all_names,
-                               all_dongs=all_dongs,
-                               isIndex=False)
+                               all_dongs=all_dongs, zip=zip, isIndex=False)
 
 
 # Handles an error that is produced when an invalid email/username is entered
