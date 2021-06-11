@@ -37,7 +37,7 @@ def internal_error(error):
     return render_template('index.html', error=error, msg=msg, title='| Error', isIndex=True)
 
 
-# Handles an error that is produced when the url/API token is invalid
+# Handles an error that is produced when the URL is invalid
 @app.errorhandler(requests.exceptions.ConnectionError)
 def connection_error(error):
     msg = '<p style="color:red;">The credentials you entered were incorrect, please try again.</p><br />'
