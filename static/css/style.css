@@ -72,13 +72,46 @@ input {
   input, button, .container {
     font-size: 30px;
   }
-  
+   .card {
+      min-height: 510px;
+  }
   #ldrBrd {
     font-size: 20px;
   }
   
   .topnav {
-    padding-bottom: 1px;
+    padding-bottom: 0px;
     font-size: 40px;
   }
+}
+@media all and (prefers-color-scheme: dark) {
+    .card {
+        background-color: #2d333b;
+    }
+
+    body {
+      background-color: #22272e;
+    }
+
+    button, input {
+        background-color: #373E47;
+        color: #9EAAB7;
+        border: 0;
+        font-family: Ubuntu-Regular;
+        box-shadow: none;
+        border-radius: 0;
+        -webkit-appearance: none;
+    }
+
+    .topnav {
+      background-color: #524582;
+    }
+
+    p, h1, h3 {
+      color: #9eaab7;
+    }
+
+    .title {
+      color: #575d64;
+    }
 }
