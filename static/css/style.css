@@ -7,6 +7,8 @@ src: url("/static/fonts/ubuntu-regular-webfont.woff")format("woff")
 button {
   display: block;
   min-width: 100%;
+  font-family: Ubuntu-Regular;
+  -webkit-appearance: none;
   margin-top: 15%;
 }
 
@@ -56,6 +58,8 @@ h1 {
 input {
   box-sizing: border-box;
   width: 100%;
+  font-family: Ubuntu-Regular;
+  -webkit-appearance: none;
   text-align: center;
 }
 
