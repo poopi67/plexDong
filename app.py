@@ -33,14 +33,22 @@ def display_dong():
 # Handles an error that is produced when an invalid email/username is entered
 @app.errorhandler(500)
 def internal_error(error):
+    print(error)
     msg = '<p style="color:red;">Invalid email/username, please try again.</p><br />'
-    return render_template('index.html', error=error, msg=msg, title='| Error', isIndex=True)
+    return render_template('index.html', msg=msg, title='| Error', isIndex=True)
 
 
 # Handles an error that is produced when the URL is invalid
 @app.errorhandler(requests.exceptions.ConnectionError)
 def connection_error(error):
-    msg = '<p style="color:red;">The credentials you entered were incorrect, please try again.</p><br />'
+    msg = '<p style="color:red;">The URL you entered was incorrect, please try again.</p><br />'
+    return render_template('index.html', error=error, msg=msg, title='| Error', isIndex=True)
+
+
+# Handles MissingSchema error
+@app.errorhandler(requests.exceptions.MissingSchema)
+def connection_error(error):
+    msg = '<p style="color:red;">The API/URL credentials you entered were incorrect, please try again.</p><br />'
     return render_template('index.html', error=error, msg=msg, title='| Error', isIndex=True)
 
 
