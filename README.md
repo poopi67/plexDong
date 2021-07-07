@@ -14,7 +14,7 @@ Takes the current play count from [Tautulli](https://github.com/Tautulli/Tautull
 
 ### Docker
 
-`sudo docker run -h localhost -p 8787:8787  -it -e api_token=<api_token> -e server_url=<server_url> poopi67/plexdong:latest`
+`sudo docker run -h localhost -p 8787:8787  -it -e api_token=<api_token> -e server_url=<server_url> ghcr.io/poopi67/plexdong:latest`
 
 Simply replace the environment variables with your own and run the command.
 
