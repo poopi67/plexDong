@@ -16,4 +16,4 @@ RUN pip3 install -r requirements.txt
 EXPOSE 8787
 
 #Run the command
-CMD gunicorn --bind 0.0.0.0:8787 wsgi:app
+CMD gunicorn wsgi:app
